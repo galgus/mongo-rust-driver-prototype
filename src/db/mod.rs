@@ -347,7 +347,7 @@ impl ThreadedDatabase for Database {
                 doc = merge_options(doc, user_options);
             }
             None => {
-                doc.insert("roles", Vec::new());
+                doc.insert("roles", Vec::new() as Vec<bson::Document>);
             }
         };
 
